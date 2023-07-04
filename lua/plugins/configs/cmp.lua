@@ -8,6 +8,14 @@ if not lspkind_status then
 	return
 end
 
+local luasnip_status, luasnip = pcall(require, "luasnip")
+if not luasnip_status then
+	return
+end
+
+-- load friendly snippets
+require("luasnip/loaders/from_vscode").lazy_load()
+
 local map = cmp.mapping
 
 -- vim.api.nvim_set_hl(0, "CustomPmenu", { bg = "#181616", fg = "White" })
@@ -15,6 +23,11 @@ local map = cmp.mapping
 -- vim.api.nvim_set_hl(0, "CustomBorder", { fg = "#3c3930" })
 
 cmp.setup({
+	snippet = {
+		expand = function(args)
+			luasnip.expand(args.body)
+		end,
+	},
 	window = {
 		max_height = 10,
 		completion = {
@@ -22,6 +35,11 @@ cmp.setup({
 			windowside_padding = 1,
 			scrollbar = false,
 		},
+	},
+	performance = {
+		trigger_debounce_time = 500,
+		throttle = 550,
+		fetching_timeout = 80,
 	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-k>"] = map.select_prev_item(),
@@ -34,6 +52,7 @@ cmp.setup({
 	}),
 	sources = {
 		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
 		{ name = "buffer" },
 		{ name = "path" },
 	},

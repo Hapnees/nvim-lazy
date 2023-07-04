@@ -141,6 +141,28 @@ local plugins = {
 			require("plugins.configs.gitsigns")
 		end,
 	},
+
+	-- Lazygit
+	{
+		"kdheepak/lazygit.nvim",
+	},
+
+	-- Snippets
+	{
+		"L3MON4D3/LuaSnip",
+		"saadparwaiz1/cmp_luasnip",
+		"rafamadriz/friendly-snippets",
+	},
+
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("plugins.configs.indent")
+		end,
+	},
+
+	-- Terminal
+	{ "akinsho/toggleterm.nvim", version = "*", config = true },
 }
 
 require("lazy").setup(plugins)
