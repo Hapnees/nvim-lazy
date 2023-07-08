@@ -95,6 +95,8 @@ local plugins = {
 		end,
 	},
 
+	{ "WhoIsSethDaniel/lualine-lsp-progress.nvim" },
+
 	-- Auto closing
 	{
 		{
