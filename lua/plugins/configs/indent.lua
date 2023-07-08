@@ -5,8 +5,6 @@ if not status then
 	return
 end
 
-print("INDENT")
-
 indent.setup({
 	show_current_context = true,
 })

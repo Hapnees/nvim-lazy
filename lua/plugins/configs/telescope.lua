@@ -9,6 +9,11 @@ if not actions_status then
 end
 
 telescope.setup({
+	pickers = {
+		colorscheme = {
+			enable_preview = true,
+		},
+	},
 	defaults = {
 		-- selection_caret = "  ",
 		-- initial_mode = "insert",

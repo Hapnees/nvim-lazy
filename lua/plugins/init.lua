@@ -18,6 +18,7 @@ local plugins = {
 	{
 		"nanotech/jellybeans.vim",
 		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+		{ "RRethy/nvim-base16" },
 	},
 
 	-- Treesitter
