@@ -16,4 +16,5 @@ neotree.setup({
 			{ source = "git_status", display_name = " 󰊢 Git " },
 		},
 	},
+	default_component_configs = {},
 })
