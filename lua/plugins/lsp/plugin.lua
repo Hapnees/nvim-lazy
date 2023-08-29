@@ -21,8 +21,8 @@ return {
 			require("plugins.lsp.mason")
 		end,
 	},
-	"williamboman/mason-lspconfig.nvim",
-	"jose-elias-alvarez/typescript.nvim",
+	{ "williamboman/mason-lspconfig.nvim" },
+	{ "jose-elias-alvarez/typescript.nvim" },
 	{
 		"jose-elias-alvarez/null-ls.nvim",
 		event = "InsertEnter",
