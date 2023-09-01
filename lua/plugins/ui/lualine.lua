@@ -51,6 +51,7 @@ local lsp_progress = {
 
 local config = {
 	options = {
+		theme = "solarized_dark",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 	},

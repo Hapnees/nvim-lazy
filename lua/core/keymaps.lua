@@ -7,6 +7,9 @@ vim.g.maplocalleader = " "
 
 -- Press jk fast to enter
 key("i", "jk", "<Escape>")
+key("i", "Jk", "<Escape>")
+key("i", "JK", "<Escape>")
+key("i", "jK", "<Escape>")
 
 key("n", "x", '"_x')
 key("n", "d", '"_d')

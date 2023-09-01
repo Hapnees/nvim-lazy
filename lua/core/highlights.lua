@@ -1,4 +1,6 @@
-vim.cmd("colorscheme base16-tokyo-night-dark")
+-- vim.cmd("colorscheme base16-tokyo-night-dark")
+-- vim.cmd("colorscheme base16-solarized-dark")
+vim.cmd("colorscheme neosolarized")
 
 vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
